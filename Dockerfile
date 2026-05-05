@@ -18,7 +18,7 @@ RUN apt-get update && apt update && apt install -y \
   libxkbcommon0 \
   libxkbcommon-x11-0
 WORKDIR /facedetection
-COPY runs/detect/yolov8_facedetection-3/weights/best.pt best.pt
+COPY best.pt best.pt
 COPY facedetection.py facedetection.py
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
